@@ -21,14 +21,7 @@ const routes: Routes = [
 			),
 		canActivate: [AuthGuard],
 	},
-	{
-		path: "analyzed-image-list",
-		loadChildren: () =>
-			import("./pages/analyzed-image-list/analyzed-image-list.module").then(
-				(m) => m.AnalyzedImageListPageModule
-			),
-		canActivate: [AuthGuard],
-	},
+
 	{
 		path: "label-identify",
 		loadChildren: () =>
