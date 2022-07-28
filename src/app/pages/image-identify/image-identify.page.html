@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>顔解析</ion-title>
+    <ion-buttons slot="start">
+      <ion-button routerLink="/home">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-fab vertical="bottom" horizontal="center" slot="fixed">
+    <ion-fab-button (click)="addPhoto()">
+      <ion-icon name="camera"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <ion-list>
+    <ion-item>
+      <ion-label>撮影した画像</ion-label>
+    </ion-item>
+    <div *ngIf="!!photo" class="photoDiv">
+      <ion-img [src]="photo.webPath" style="width:50%;height:50%;"></ion-img>
+      <ion-button [disabled]="!photo" (click)="analyze(photo.webPath)">画像を解析する</ion-button>
+    </div>
+  </ion-list>
+
+
+</ion-content>

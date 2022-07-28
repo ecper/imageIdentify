@@ -1,0 +1,9 @@
+.buttonsDiv {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	ion-button {
+		width: 40%;
+	}
+}
